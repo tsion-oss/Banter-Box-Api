@@ -21,7 +21,7 @@ export const signup = async (req, res) => {
 
     //   https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=tsion
 
-      const userProfilePic = `https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=${username}`
+      const userProfilePic = `https://avatar.iran.liara.run/public/?username=${username}`
 
         const newUser = new User({
             fullName,

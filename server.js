@@ -11,7 +11,8 @@ import connectToMongoDB from "./db/index.js"
 
 import cors from 'cors'
 
-const app = express()
+import { app, server } from "./socket/socket.js"
+
 const PORT = process.env.PORT
 
 const corsOptions = {
@@ -30,7 +31,7 @@ app.use("/api/messages", messageRoutes)
 app.use("/api/users", userRoutes)
 
 
-app.listen( PORT, () => {
+server.listen( PORT, () => {
    connectToMongoDB()
    console.log(`Server Running on port http://localhost:${PORT}`)
 })
